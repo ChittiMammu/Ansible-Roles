@@ -12,10 +12,12 @@
 - name: create expense user
   ansible.builtin.user:
     name: expense
-- name: run app pre requisites
+
+- name: run app pre-requisites
   ansible.builtin.import_role:
     name: common
     task_from: app-pre-req
+    
 - name: install npm dependencies
   ansible.builtin.command: npm install
   args:
