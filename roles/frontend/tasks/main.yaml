@@ -10,7 +10,7 @@
 - name: run app pre-requisites
   ansible.builtin.import_role:
     name: common
-    task_from: app-pre-req
+    tasks_from: app-pre-req
 # configuration lo emana changes vuntene below command manaki nginx restart avali otherwise no need
 - name: copy backend conf
   ansible.builtin.template:
